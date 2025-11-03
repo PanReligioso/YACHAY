@@ -1,0 +1,72 @@
+/* ==========================================
+   MODO OSCURO - SOBREESCRITURA DE VARIABLES
+   ========================================== */
+
+/* ------------------------------------------------------------------- */
+/* 1. Definición del Esquema Oscuro */
+/* ------------------------------------------------------------------- */
+:root.dark-mode {
+    /* FONDOS Y BORDES (Inversión de Esquema) */
+    --bg-primary: #121212;
+    --bg-secondary: var(--bg-dark);
+    --bg-dark: #2a2a2a;
+    --bg-overlay: rgba(255, 255, 255, 0.1);
+
+    /* Textos */
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --text-tertiary: #64748b;
+    --text-white: #121212;
+
+    /* Primarios (Ajuste de Saturación) */
+    --primary-50: #0c4a6e;
+    --primary-100: #075985;
+    --primary-200: #0369a1;
+    --primary-300: #0284c7;
+    --primary-400: #0ea5e9;
+
+    /* SOMBRAS (Ajuste para fondos oscuros) */
+    --shadow-sm: 0 1px 2px 0 rgb(255 255 255 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(255 255 255 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(255 255 255 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.7);
+
+    /* NUEVO: Variable para el Header con scroll */
+    --header-scrolled-bg: rgba(18, 18, 18, 0.95);
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. Reglas de Transición y Fallback */
+/* ------------------------------------------------------------------- */
+
+/* Base: Define el fallback claro */
+:root {
+    --header-scrolled-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Header: Asegura que la clase scrolled use la variable */
+.header.scrolled {
+    background: var(--header-scrolled-bg); /* Usa la variable definida arriba */
+    backdrop-filter: blur(10px);
+}
+
+/* Body: La clase debe aplicarse al <html>, pero la transición del body debe funcionar */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    transition: var(--transition); /* Asegura la transición suave de colores */
+}
+
+/* Cards: Ajusta el hover en modo oscuro */
+.card {
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-md);
+}
+:root.dark-mode .card {
+    background: var(--bg-secondary);
+}
+.card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
+}
