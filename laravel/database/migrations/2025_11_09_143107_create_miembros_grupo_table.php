@@ -6,21 +6,24 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('miembros_grupo', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_miembro');
+            $table->unsignedBigInteger('id_grupo');
+            $table->unsignedBigInteger('id_usuario');
+            $table->enum('rol_grupo', ['admin', 'moderador', 'miembro'])->default('miembro');
+            $table->timestamp('fecha_union')->useCurrent();
+
+            $table->foreign('id_grupo')->references('id_grupo')->on('grupos_tutoria')->cascadeOnDelete();
+            $table->foreign('id_usuario')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+
+            $table->unique(['id_grupo', 'id_usuario'], 'uk_grupo_usuario');
+            $table->index('id_usuario', 'fk_miembro_usuario');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('miembros_grupo');
     }

@@ -6,21 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('categorias_libros', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_categoria');
+            $table->string('nombre_categoria', 100)->unique();
+            $table->text('descripcion')->nullable();
+            $table->string('icono', 50)->nullable();
+            $table->timestamp('fecha_creacion')->useCurrent();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('categorias_libros');
     }

@@ -6,21 +6,26 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('resenas_comedores', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_resena');
+            $table->unsignedBigInteger('id_comedor');
+            $table->unsignedBigInteger('id_usuario');
+            $table->tinyInteger('calificacion')->comment('De 1 a 5 estrellas');
+            $table->text('comentario')->nullable();
+            $table->date('fecha_visita')->nullable();
+            $table->timestamp('fecha_resena')->useCurrent();
+
+            $table->foreign('id_comedor')->references('id')->on('comedores')->cascadeOnDelete();
+            $table->foreign('id_usuario')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+
+            $table->unique(['id_usuario', 'id_comedor'], 'uk_usuario_comedor');
+            $table->index('id_comedor', 'fk_resena_comedor');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('resenas_comedores');
     }

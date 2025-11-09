@@ -6,21 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('estadisticas_diarias', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_estadistica');
+            $table->date('fecha')->unique();
+            $table->integer('usuarios_activos')->default(0);
+            $table->integer('libros_subidos')->default(0);
+            $table->integer('apuntes_subidos')->default(0);
+            $table->integer('descargas_totales')->default(0);
+            $table->integer('grupos_creados')->default(0);
+            $table->integer('mensajes_enviados')->default(0);
+            $table->integer('reportes_generados')->default(0);
+            $table->timestamp('fecha_calculo')->useCurrent();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('estadisticas_diarias');
     }

@@ -6,21 +6,24 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('tutorias', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('tutor_id');
+            $table->string('materia');
+            $table->text('descripcion')->nullable();
+            $table->decimal('precio_hora', 10, 2);
+            $table->text('horario_disponible')->nullable();
+            $table->string('modalidad', 50)->nullable()->comment('Presencial, Virtual, Mixta');
+            $table->timestamp('created_at')->useCurrent();
+
+            $table->foreign('tutor_id')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+            $table->index('tutor_id', 'fk_tutoria_tutor');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('tutorias');
     }

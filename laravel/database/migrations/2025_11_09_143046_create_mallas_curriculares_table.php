@@ -6,21 +6,19 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('mallas_curriculares', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_malla');
+            $table->integer('periodo')->unique()->comment('Año de la malla: 2018, 2025');
+            $table->string('nombre_malla');
+            $table->enum('formato_material', ['foto', 'pdf', 'mixto']);
+            $table->boolean('esta_activa')->default(true);
+            $table->timestamp('fecha_creacion')->useCurrent();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('mallas_curriculares');
     }
