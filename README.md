@@ -1,106 +1,195 @@
-# YACHAY
-YACHAY es una plataforma web educativa diseñada para estudiantes de Ingeniería de Sistemas en la Universidad Continental Cusco, enfocada en compartir recursos, organizar tutorías y facilitar servicios útiles a la comunidad estudiantil.
+# YACHAY - Plataforma Educativa Continental
 
-El proyecto ha sido refactorizado y migrado a una estructura moderna para facilitar el desarrollo, manteniendo el principio del patrón MVC (Modelo-Vista-Controlador).
-
-Framework Base: Laravel (Utilizado principalmente por Blade y sus helpers).
-
-Lógica de Negocio: PHP Puro (Directamente en las vistas Blade).
-
-Datos Temporales: Archivos JSON (storage/app/) — Se utiliza como la fuente de datos temporal, simulando la capa del Modelo y la Base de Datos.
-
-Frontend: HTML5, CSS (Variables CSS/Responsivo), JavaScript (ES6).
-
-Esta versión de la plataforma incluye la implementación visual completa y las funcionalidades clave del frontend:
-
-1. 🗺️ Módulo de Comedores (Focus)
-Centrado Preciso: Mapa inicial centrado automáticamente en las coordenadas exactas de la Universidad Continental Cusco.
-
-Localización: Directorio completo de comedores, mostrando cada establecimiento como un marcador interactivo en Google Maps (initMap).
-
-Filtros: Funcionalidad completa de listado y filtrado por universidad, precio y tipo de comida.
-
-2. 🌗 Personalización y Diseño
-Modo Oscuro Persistente: Se agregó un toggle de modo oscuro que recuerda la preferencia del usuario en todas las páginas utilizando JavaScript y localStorage.
-
-Diseño Responsivo: Implementación completa de un diseño adaptativo (Responsive Design) basado en variables CSS.
-
-3. 🔑 Seguridad y Estructura
-Autenticación Base: Estructura para el manejo de sesiones y lógica de autenticación (Login/Registro).
-
-Seguridad de Credenciales: La configuración de las API Keys sensibles (Google Maps, Google OAuth) ha sido movida y asegurada mediante el uso de variables de entorno (.env).
-
-## 🚀  Instalación y Configuración
-
-### Requisitos Previos
-- PHP >= 8.0
-- Composer
-- MySQL/MariaDB
-
-### Pasos de Instalación
-
-1. **Abrir la terminal en el directorio del proyecto**
-```bash
-   cd YACHAY
-```
-
-2. **Navegar a la carpeta Laravel**
-```bash
-   cd laravel
-```
-
-3. **Instalar dependencias de Composer**
-```bash
-   composer install
-```
-
-4. **Configurar el archivo de entorno**
-```bash
-   cp .env.example .env
-```
-   
-   Edita el archivo `.env` con tus credenciales de base de datos:
-```
-   DB_DATABASE=plataforma_continental
-   DB_USERNAME=tu_usuario
-   DB_PASSWORD=tu_contraseña
-```
-
-5. **Generar la clave de aplicación**
-```bash
-   php artisan key:generate
-```
-
-6. **Importar la base de datos**
-   - Importa el archivo `plataforma_continental.sql` en tu servidor MySQL
-
-7. **Iniciar el servidor de desarrollo**
-```bash
-   php artisan serve
-```
-
-8. **Acceder a la aplicación**
-   - Abre tu navegador en: `http://localhost:8000`
+Plataforma web colaborativa para estudiantes de Ingeniería de Sistemas e Informática de la Universidad Continental, Cusco.
 
 ---
 
-### Estructura del Proyecto
+## Tabla de Contenidos
+
+- [Características](#características)
+- [Requisitos del Sistema](#requisitos-del-sistema)
+- [Instalación](#instalación)
+- [Configuración](#configuración)
+- [Uso](#uso)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Tecnologías](#tecnologías)
+
+---
+
+## Características
+
+**Biblioteca Digital**
+- Marketplace de libros académicos
+- Sistema de validación de contenido
+- Búsqueda avanzada por categorías
+
+**Sistema de Apuntes**
+- Apuntes organizados por malla curricular
+- Soporte para mallas 2018 y 2024
+- Filtrado por ciclo y curso
+
+**Grupos de Tutoría**
+- Creación de grupos públicos y privados
+- Chat en tiempo real
+- Gestión de participantes
+
+**Directorio de Restaurantes**
+- Mapa interactivo con Google Maps
+- Reseñas y calificaciones
+- Filtros por precio y ubicación
+
+---
+
+## Requisitos del Sistema
+
+- **PHP** >= 8.0
+- **Composer** >= 2.0
+- **MySQL/MariaDB** >= 5.7
+- **Node.js** >= 14.x (opcional, para assets)
+- **Servidor web** Apache/Nginx
+
+---
+
+## Instalación
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/tu-usuario/yachay.git
+cd YACHAY
+```
+
+### 2. Navegar a la carpeta Laravel
+```bash
+cd laravel
+```
+
+### 3. Instalar dependencias
+```bash
+composer install
+```
+
+### 4. Configurar el entorno
+
+Copia el archivo de configuración:
+```bash
+cp .env.example .env
+```
+
+### 5. Generar clave de aplicación
+```bash
+php artisan key:generate
+```
+
+---
+
+## Configuración
+
+### Base de Datos
+
+Edita el archivo `.env` con tus credenciales:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=plataforma_continental
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña
+```
+
+### Importar Base de Datos
+
+Importa el archivo SQL en tu servidor MySQL:
+```bash
+mysql -u tu_usuario -p plataforma_continental < plataforma_continental.sql
+```
+
+O usando phpMyAdmin, importa el archivo `plataforma_continental.sql`
+
+### Configuración de Google OAuth (Opcional)
+```env
+GOOGLE_CLIENT_ID=tu_client_id
+GOOGLE_CLIENT_SECRET=tu_client_secret
+GOOGLE_REDIRECT_URI=http://localhost:8000/auth/google/callback
+```
+
+---
+
+## Uso
+
+### Iniciar el servidor de desarrollo
+
+Asegúrate de estar en la carpeta `laravel`:
+```bash
+php artisan serve
+```
+
+El servidor estará disponible en: **http://localhost:8000**
+
+### Rutas Principales
+
+| Módulo | Ruta | Descripción |
+|--------|------|-------------|
+| Inicio | `/` | Página principal |
+| Libros | `/libros` | Biblioteca digital |
+| Apuntes | `/apuntes` | Sistema de apuntes |
+| Tutorías | `/tutorias` | Grupos de estudio |
+| Restaurantes | `/comedores` | Directorio local |
+
+---
+
+## Estructura del Proyecto
 ```
 YACHAY/
 └── laravel/
     ├── app/
+    │   ├── Http/
+    │   │   ├── Controllers/
+    │   │   └── Middleware/
+    │   └── Models/
     ├── config/
     ├── database/
+    │   ├── migrations/
+    │   └── seeders/
     ├── public/
-    └── resources/
+    │   ├── css/
+    │   └── js/
+    ├── resources/
+    │   └── views/
+    │       ├── layouts/
+    │       └── components/
+    ├── routes/
+    │   └── web.php
+    └── .env
 ```
 
-### Soporte
+---
 
-Para problemas o consultas, contacta al equipo de desarrollo.
+## Tecnologías
 
-APP_URL=http://localhost
-GOOGLE_MAPS_KEY="[Tu clave de Maps aquí]"
-Ejecuta el servidor de desarrollo: php artisan serve.
+### Backend
+- Laravel 10.x
+- PHP 8.2
+- MySQL/MariaDB
 
-Accede a las rutas, por ejemplo: /comedores.
+### Frontend
+- Blade Templates
+- CSS3 (Variables + Grid)
+- JavaScript Vanilla
+- Font Awesome
+
+### Servicios
+- Google OAuth 2.0
+- Google Maps API
+- Google Drive API
+
+---
+
+## Licencia
+
+Este proyecto es de uso educativo para la Universidad Continental.
+
+---
+
+## Autor
+
+Desarrollado por estudiantes de Ingeniería de Sistemas e Informática - Universidad Continental, Cusco.
