@@ -30,14 +30,74 @@ Autenticación Base: Estructura para el manejo de sesiones y lógica de autentic
 
 Seguridad de Credenciales: La configuración de las API Keys sensibles (Google Maps, Google OAuth) ha sido movida y asegurada mediante el uso de variables de entorno (.env).
 
-🚀 Instalación y Uso (Desarrollo)
-Clona el repositorio.
+## 🚀  Instalación y Configuración
 
-Ejecuta composer install.
+### Requisitos Previos
+- PHP >= 8.0
+- Composer
+- MySQL/MariaDB
 
-Copia .env.example a .env y configura las variables, incluyendo:
+### Pasos de Instalación
 
-Fragmento de código
+1. **Abrir la terminal en el directorio del proyecto**
+```bash
+   cd YACHAY
+```
+
+2. **Navegar a la carpeta Laravel**
+```bash
+   cd laravel
+```
+
+3. **Instalar dependencias de Composer**
+```bash
+   composer install
+```
+
+4. **Configurar el archivo de entorno**
+```bash
+   cp .env.example .env
+```
+   
+   Edita el archivo `.env` con tus credenciales de base de datos:
+```
+   DB_DATABASE=plataforma_continental
+   DB_USERNAME=tu_usuario
+   DB_PASSWORD=tu_contraseña
+```
+
+5. **Generar la clave de aplicación**
+```bash
+   php artisan key:generate
+```
+
+6. **Importar la base de datos**
+   - Importa el archivo `plataforma_continental.sql` en tu servidor MySQL
+
+7. **Iniciar el servidor de desarrollo**
+```bash
+   php artisan serve
+```
+
+8. **Acceder a la aplicación**
+   - Abre tu navegador en: `http://localhost:8000`
+
+---
+
+### Estructura del Proyecto
+```
+YACHAY/
+└── laravel/
+    ├── app/
+    ├── config/
+    ├── database/
+    ├── public/
+    └── resources/
+```
+
+### Soporte
+
+Para problemas o consultas, contacta al equipo de desarrollo.
 
 APP_URL=http://localhost
 GOOGLE_MAPS_KEY="[Tu clave de Maps aquí]"
