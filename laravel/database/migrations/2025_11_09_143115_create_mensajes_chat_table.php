@@ -19,7 +19,8 @@ return new class extends Migration
             $table->timestamp('fecha_envio')->useCurrent();
             $table->timestamp('fecha_edicion')->nullable();
 
-            $table->foreign('id_usuario')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+            // CORREGIDO: Apunta a 'id'
+            $table->foreign('id_usuario')->references('id')->on('usuarios')->cascadeOnDelete();
             $table->foreign('id_grupo')->references('id_grupo')->on('grupos_tutoria')->cascadeOnDelete();
 
             $table->index('id_usuario', 'fk_mensaje_usuario');

@@ -1,8 +1,3 @@
-@php
-    $isLoggedIn = session('logged_in', false);
-    $userName = session('user_name', '');
-@endphp
-
 <header class="header" id="header">
     <div class="container">
         <div class="header-container">
@@ -45,7 +40,7 @@
 
                 <div class="nav-actions">
 
-                    {{-- BOTÓN DE MODO OSCURO (AÑADIDO AQUÍ) --}}
+                    {{-- BOTÓN DE MODO OSCURO --}}
                     <button id="theme-toggle" class="btn btn-icon" aria-label="Cambiar Tema"
                             style="width: 45px; height: 45px; border-radius: var(--radius-full);
                                    background: var(--bg-secondary); border: 2px solid var(--primary-200);
@@ -53,25 +48,45 @@
                         <i class="fas fa-moon" id="theme-icon" style="color: var(--text-primary); font-size: var(--text-lg);"></i>
                     </button>
 
-                    @if(!$isLoggedIn)
-                        <a href="{{ url('/login') }}" class="btn btn-secondary hide-mobile">
+                    @auth
+                        {{-- Usuario logueado --}}
+                        <div class="user-menu" style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                            <a href="{{ route('perfil.show') }}"
+                               style="display: flex; align-items: center; gap: var(--spacing-sm);
+                                      padding: var(--spacing-sm) var(--spacing-md); border-radius: var(--radius-full);
+                                      background: var(--primary-50); color: var(--primary-600); font-weight: 600;
+                                      text-decoration: none; transition: all 0.3s;">
+                                @if(auth()->user()->avatar)
+                                    <img src="{{ auth()->user()->avatar }}" alt="Avatar"
+                                         style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                @else
+                                    <i class="fas fa-user-circle" style="font-size: 1.5rem;"></i>
+                                @endif
+                                <span class="hide-mobile">{{ auth()->user()->nombre }}</span>
+                            </a>
+
+                            <form method="POST" action="{{ route('logout') }}" style="margin: 0;">
+                                @csrf
+                                <button type="submit" class="btn btn-secondary"
+                                        style="padding: var(--spacing-sm) var(--spacing-md);
+                                               display: flex; align-items: center; gap: var(--spacing-xs);"
+                                        onclick="return confirm('¿Seguro que quieres cerrar sesión?')">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span class="hide-mobile">Salir</span>
+                                </button>
+                            </form>
+                        </div>
+                    @else
+                        {{-- Usuario no logueado --}}
+                        <a href="{{ route('login') }}" class="btn btn-secondary hide-mobile">
                             <i class="fas fa-sign-in-alt"></i>
                             Iniciar Sesión
                         </a>
-                        <a href="{{ url('/registro') }}" class="btn btn-primary hide-mobile">
+                        <a href="{{ route('register') }}" class="btn btn-primary hide-mobile">
                             <i class="fas fa-user-plus"></i>
                             Registrarse
                         </a>
-                    @else
-                        <span style="margin-right: var(--spacing-md); color: var(--primary-600); font-weight: 600;">
-                            <i class="fas fa-user-circle"></i> {{ $userName }}
-                        </span>
-                        <a href="{{ url('/login?logout=1') }}" class="btn btn-outline"
-                           onclick="return confirm('¿Seguro que quieres cerrar sesión?')">
-                            <i class="fas fa-sign-out-alt"></i>
-                            Salir
-                        </a>
-                    @endif
+                    @endauth
                 </div>
             </nav>
 

@@ -16,7 +16,9 @@ return new class extends Migration
             $table->timestamp('fecha_union')->useCurrent();
 
             $table->foreign('id_grupo')->references('id_grupo')->on('grupos_tutoria')->cascadeOnDelete();
-            $table->foreign('id_usuario')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+
+            // CORREGIDO: Apunta a 'id'
+            $table->foreign('id_usuario')->references('id')->on('usuarios')->cascadeOnDelete();
 
             $table->unique(['id_grupo', 'id_usuario'], 'uk_grupo_usuario');
             $table->index('id_usuario', 'fk_miembro_usuario');

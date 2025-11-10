@@ -1,3 +1,4 @@
+// database/migrations/2025_11_09_143057_create_apuntes_table.php (CORREGIDO)
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -26,8 +27,13 @@ return new class extends Migration
             $table->timestamp('fecha_subida')->useCurrent();
             $table->timestamp('fecha_actualizacion')->useCurrent()->useCurrentOnUpdate();
 
-            $table->foreign('id_usuario_subida')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
-            $table->foreign('id_validador')->references('id_usuario')->on('usuarios')->nullOnDelete();
+            // CORRECCIÓN 1: Referencia a la clave primaria 'id' en la tabla 'usuarios'
+            $table->foreign('id_usuario_subida')->references('id')->on('usuarios')->cascadeOnDelete();
+
+            // CORRECCIÓN 2: Referencia a la clave primaria 'id' en la tabla 'usuarios'
+            $table->foreign('id_validador')->references('id')->on('usuarios')->nullOnDelete();
+
+            // Esta línea es correcta: 'id_curso' referencia a 'id_curso'
             $table->foreign('id_curso')->references('id_curso')->on('cursos')->cascadeOnDelete();
 
             $table->index('id_usuario_subida', 'fk_apunte_usuario');

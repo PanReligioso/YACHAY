@@ -1,3 +1,4 @@
+// 2025_11_09_143134_create_historial_actividad_table.php (CORREGIDO)
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -17,7 +18,8 @@ return new class extends Migration
             $table->string('user_agent')->nullable();
             $table->timestamp('fecha_accion')->useCurrent();
 
-            $table->foreign('id_usuario')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+            // CORREGIDO: Apunta a 'id' de la tabla 'usuarios'
+            $table->foreign('id_usuario')->references('id')->on('usuarios')->cascadeOnDelete();
 
             $table->index(['id_usuario', 'fecha_accion'], 'idx_usuario_fecha');
             $table->index('tipo_accion', 'idx_historial_tipo');

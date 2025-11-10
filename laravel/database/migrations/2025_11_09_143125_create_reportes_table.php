@@ -21,8 +21,10 @@ return new class extends Migration
             $table->timestamp('fecha_reporte')->useCurrent();
             $table->timestamp('fecha_resolucion')->nullable();
 
-            $table->foreign('id_usuario_reporta')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
-            $table->foreign('id_moderador')->references('id_usuario')->on('usuarios')->nullOnDelete();
+            // CORREGIDO: Apunta a 'id' de la tabla 'usuarios'
+            $table->foreign('id_usuario_reporta')->references('id')->on('usuarios')->cascadeOnDelete();
+            // CORREGIDO: Apunta a 'id' de la tabla 'usuarios'
+            $table->foreign('id_moderador')->references('id')->on('usuarios')->nullOnDelete();
 
             $table->index('id_usuario_reporta', 'fk_reporte_usuario');
             $table->index('id_moderador', 'fk_reporte_moderador');

@@ -20,8 +20,10 @@ return new class extends Migration
             $table->timestamp('fecha_creacion')->useCurrent();
             $table->timestamp('fecha_respuesta')->nullable();
 
-            $table->foreign('id_docente')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
-            $table->foreign('id_usuario_respuesta')->references('id_usuario')->on('usuarios')->nullOnDelete();
+            // CORREGIDO: Apunta a 'id'
+            $table->foreign('id_docente')->references('id')->on('usuarios')->cascadeOnDelete();
+            // CORREGIDO: Apunta a 'id'
+            $table->foreign('id_usuario_respuesta')->references('id')->on('usuarios')->nullOnDelete();
 
             $table->index('id_docente', 'fk_sugerencia_docente');
             $table->index('id_usuario_respuesta', 'fk_sugerencia_respuesta');

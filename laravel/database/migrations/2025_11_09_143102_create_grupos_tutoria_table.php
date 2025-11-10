@@ -1,3 +1,4 @@
+// 2025_11_09_143102_create_grupos_tutoria_table.php (Código para la tabla GRUPOS_TUTORIA)
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -21,7 +22,9 @@ return new class extends Migration
             $table->timestamp('fecha_creacion')->useCurrent();
 
             $table->foreign('id_curso')->references('id_curso')->on('cursos')->nullOnDelete();
-            $table->foreign('id_creador')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+
+            // CORREGIDO: Apunta a 'id' en la tabla usuarios
+            $table->foreign('id_creador')->references('id')->on('usuarios')->cascadeOnDelete();
 
             $table->index('id_curso', 'fk_grupo_curso');
             $table->index('id_creador', 'fk_grupo_creador');

@@ -1,3 +1,4 @@
+// 2025_11_09_143216_create_tutorias_table.php (CORREGIDO)
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -18,7 +19,8 @@ return new class extends Migration
             $table->string('modalidad', 50)->nullable()->comment('Presencial, Virtual, Mixta');
             $table->timestamp('created_at')->useCurrent();
 
-            $table->foreign('tutor_id')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+            // CORREGIDO: Apunta a 'id' de la tabla 'usuarios' (NO 'id_usuario')
+            $table->foreign('tutor_id')->references('id')->on('usuarios')->cascadeOnDelete();
             $table->index('tutor_id', 'fk_tutoria_tutor');
         });
     }

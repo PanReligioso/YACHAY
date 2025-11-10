@@ -18,7 +18,8 @@ return new class extends Migration
             $table->timestamp('fecha_resena')->useCurrent();
 
             $table->foreign('id_comedor')->references('id')->on('comedores')->cascadeOnDelete();
-            $table->foreign('id_usuario')->references('id_usuario')->on('usuarios')->cascadeOnDelete();
+            // CORREGIDO: Apunta a 'id'
+            $table->foreign('id_usuario')->references('id')->on('usuarios')->cascadeOnDelete();
 
             $table->unique(['id_usuario', 'id_comedor'], 'uk_usuario_comedor');
             $table->index('id_comedor', 'fk_resena_comedor');
