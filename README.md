@@ -136,6 +136,44 @@ El servidor estará disponible en: **http://localhost:8000**
 | Restaurantes | `/comedores` | Directorio local |
 
 ---
+### Base de Datos
+
+**1. Iniciar XAMPP**
+- Abre XAMPP Control Panel
+- Inicia los servicios **Apache** y **MySQL**
+
+**2. Crear la base de datos**
+
+Accede a phpMyAdmin: **http://localhost/phpmyadmin**
+
+Crea una nueva base de datos:
+```sql
+CREATE DATABASE plataforma_continental CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+O desde la interfaz de phpMyAdmin:
+- Click en "Nueva"
+- Nombre: `plataforma_continental`
+- Cotejamiento: `utf8mb4_unicode_ci`
+- Click en "Crear"
+
+**3. Importar datos**
+
+Importa el archivo SQL en tu base de datos:
+- Selecciona la base de datos `plataforma_continental`
+- Click en la pestaña "Importar"
+- Selecciona el archivo `plataforma_continental.sql`
+- Click en "Continuar"
+
+Edita el archivo `.env` con tus credenciales:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=plataforma_continental
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
 ## Estructura del Proyecto
 ```
