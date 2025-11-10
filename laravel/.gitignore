@@ -1,5 +1,4 @@
 *.log
-.env
 .DS_Store
 .env.backup
 .env.production
@@ -15,8 +14,6 @@
 /node_modules
 /public/build
 /public/hot
-/public/storage
-/storage/*.key
 /storage/pail
 /vendor
 Homestead.json
