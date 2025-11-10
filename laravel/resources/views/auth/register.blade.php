@@ -25,7 +25,7 @@
         @endif
 
         <form method="POST" action="{{ route('register') }}">
-            @csrf //directiva de proteccion CSRF
+            @csrf
 
             <div style="margin-bottom: var(--spacing-md);">
                 <label style="display: block; margin-bottom: var(--spacing-sm); font-weight: 600;">
