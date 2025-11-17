@@ -1,0 +1,10 @@
+[
+  {
+    "id_curso": 1,
+    "codigo_curso": "C.3",
+    "nombre_curso": "Comprensión y Producción de Textos 1",
+    "ciclo": 1,
+    "creditos": 3.0,
+    "id_malla": 2
+  }
+]

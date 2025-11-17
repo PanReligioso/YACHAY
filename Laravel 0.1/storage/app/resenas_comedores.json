@@ -1,0 +1,38 @@
+[
+    {
+        "id_resena": 1,
+        "id_comedor": 1,
+        "id_usuario": 1,
+        "calificacion": 5,
+        "comentario": "¡El menú de L&B es lo máximo! Sabor casero y siempre atienden con una sonrisa. Perfecto para la Continental.",
+        "fecha_visita": "2025-11-01",
+        "fecha_resena": "2025-11-01 13:00:00"
+    },
+    {
+        "id_resena": 2,
+        "id_comedor": 1,
+        "id_usuario": 2,
+        "calificacion": 4,
+        "comentario": "Siempre hay Ají de Gallina. Es mi salvación al mediodía.",
+        "fecha_visita": "2025-11-02",
+        "fecha_resena": "2025-11-02 18:00:00"
+    },
+    {
+        "id_resena": 3,
+        "id_comedor": 2,
+        "id_usuario": 3,
+        "calificacion": 4,
+        "comentario": "Los sánguches son perfectos para estudiar toda la tarde. Precio justo.",
+        "fecha_visita": "2025-11-03",
+        "fecha_resena": "2025-11-03 18:00:00"
+    },
+    {
+        "id_resena": 4,
+        "id_comedor": 3,
+        "id_usuario": 4,
+        "calificacion": 3,
+        "comentario": "Rápido y cumple para la hora de salida de la universidad.",
+        "fecha_visita": "2025-11-04",
+        "fecha_resena": "2025-11-04 14:00:00"
+    }
+]

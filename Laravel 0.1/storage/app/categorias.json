@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nombre": "Programaci\u00f3n",
+        "icono": "fa-code"
+    },
+    {
+        "id": 2,
+        "nombre": "Base de Datos",
+        "icono": "fa-database"
+    },
+    {
+        "id": 3,
+        "nombre": "Redes",
+        "icono": "fa-network-wired"
+    },
+    {
+        "id": 4,
+        "nombre": "Matem\u00e1ticas",
+        "icono": "fa-calculator"
+    },
+    {
+        "id": 5,
+        "nombre": "Ingenier\u00eda de Software",
+        "icono": "fa-project-diagram"
+    },
+    {
+        "id": 6,
+        "nombre": "Inteligencia Artificial",
+        "icono": "fa-brain"
+    },
+    {
+        "id": 7,
+        "nombre": "Sistemas Operativos",
+        "icono": "fa-server"
+    },
+    {
+        "id": 8,
+        "nombre": "Seguridad Inform\u00e1tica",
+        "icono": "fa-shield-alt"
+    },
+    {
+        "id": 9,
+        "nombre": "General",
+        "icono": "fa-book"
+    }
+]

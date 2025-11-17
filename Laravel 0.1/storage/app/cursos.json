@@ -1,0 +1,247 @@
+[
+  {
+    "id_curso": 1,
+    "codigo_curso": "C.3",
+    "nombre_curso": "Comprensión y Producción de Textos 1",
+    "ciclo": 1,
+    "creditos": 3.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 2,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Matemática Básica",
+    "ciclo": 1,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 3,
+    "codigo_curso": "C.2",
+    "nombre_curso": "Técnicas de Programación",
+    "ciclo": 1,
+    "creditos": 2.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 4,
+    "codigo_curso": "C.3",
+    "nombre_curso": "Introducción a la Ingeniería de Sistemas",
+    "ciclo": 1,
+    "creditos": 3.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 5,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Álgebra Lineal y Geometría Analítica",
+    "ciclo": 2,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 6,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Matemática Superior",
+    "ciclo": 2,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 7,
+    "codigo_curso": "C.2",
+    "nombre_curso": "Programación Orientada a Objetos",
+    "ciclo": 2,
+    "creditos": 2.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 8,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Cálculo Diferencial",
+    "ciclo": 3,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 9,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Física 1",
+    "ciclo": 3,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 10,
+    "codigo_curso": "C.3",
+    "nombre_curso": "Base de Datos 1",
+    "ciclo": 3,
+    "creditos": 3.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 11,
+    "codigo_curso": "C.2",
+    "nombre_curso": "Estructura de Datos",
+    "ciclo": 3,
+    "creditos": 2.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 12,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Cálculo Integral",
+    "ciclo": 4,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 13,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Física Electromagnética",
+    "ciclo": 4,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 14,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Análisis y Diseño de Software",
+    "ciclo": 4,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 15,
+    "codigo_curso": "C.2",
+    "nombre_curso": "Programación Web",
+    "ciclo": 4,
+    "creditos": 2.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 16,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Ecuaciones Diferenciales",
+    "ciclo": 5,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 17,
+    "codigo_curso": "C.3",
+    "nombre_curso": "Estadística para Ingeniería",
+    "ciclo": 5,
+    "creditos": 3.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 18,
+    "codigo_curso": "C.3",
+    "nombre_curso": "Base de Datos 2",
+    "ciclo": 5,
+    "creditos": 3.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 19,
+    "codigo_curso": "C.3",
+    "nombre_curso": "Arquitectura del Computador",
+    "ciclo": 5,
+    "creditos": 3.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 20,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Sistemas Operativos",
+    "ciclo": 6,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 21,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Redes de Computadoras",
+    "ciclo": 7,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 22,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Ingeniería de Software",
+    "ciclo": 7,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 23,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Desarrollo de Aplicaciones Móviles",
+    "ciclo": 8,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 24,
+    "codigo_curso": "C.4",
+    "nombre_curso": "Inteligencia de Negocios y Ciencia de Datos",
+    "ciclo": 9,
+    "creditos": 4.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 25,
+    "codigo_curso": "C.3",
+    "nombre_curso": "Seguridad de la Información",
+    "ciclo": 9,
+    "creditos": 3.0,
+    "id_malla": 2
+  },
+  {
+    "id_curso": 15,
+    "nombre_curso": "Estadística y Probabilidades",
+    "ciclo": 3
+  },
+  {
+    "id_curso": 18,
+    "nombre_curso": "Cálculo Diferencial",
+    "ciclo": 3
+  },
+  {
+    "id_curso": 22,
+    "nombre_curso": "Estructura de Datos",
+    "ciclo": 3
+  },
+  {
+    "id_curso": 27,
+    "nombre_curso": "Física Electromagnética",
+    "ciclo": 4
+  },
+  {
+    "id_curso": 29,
+    "nombre_curso": "Programación Web",
+    "ciclo": 4
+  },
+  {
+    "id_curso": 35,
+    "nombre_curso": "Base de Datos 2",
+    "ciclo": 5
+  },
+  {
+    "id_curso": 46,
+    "nombre_curso": "Redes de Computadoras",
+    "ciclo": 7
+  },
+  {
+    "id_curso": 54,
+    "nombre_curso": "Desarrollo de Aplicaciones Móviles",
+    "ciclo": 8
+  },
+  {
+    "id_curso": 60,
+    "nombre_curso": "Inteligencia de Negocios y Ciencia de Datos",
+    "ciclo": 9
+  }
+]

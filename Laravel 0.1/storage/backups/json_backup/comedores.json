@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "nombre": "L&B NAOMNRE",
+        "descripcion": "Menús criollos diarios con opción vegetariana. Rápido y cerca de las aulas de la Continental.",
+        "direccion": "A 104m de la Continental - Ubicación Nueva",
+        "latitud": -13.555103158158435,
+        "longitud": -71.85672704444006,
+        "universidad_cercana": "continental",
+        "precio_menu_min": 6.00,
+        "precio_menu_max": 8.00,
+        "horario_apertura": "11:30",
+        "horario_cierre": "15:00",
+        "dias_atencion": "Lun-Sáb",
+        "telefono": "991234567",
+        "tipo_comida": "Menú del día",
+        "menu_dia": "Ají de Gallina con arroz y papa, refresco.",
+        "foto": "https://images.unsplash.com/photo-1602881917633-d021c7e99990?w=400&q=80",
+        "activo": true,
+        "valoracion_promedio": 4.3
+    }
+]

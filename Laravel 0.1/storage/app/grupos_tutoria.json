@@ -1,0 +1,122 @@
+[
+    {
+        "id_grupo": 1,
+        "nombre_grupo": "Cálculo Diferencial - Grupo de Estudio",
+        "descripcion": "Grupo para resolver ejercicios y preparar exámenes de Cálculo Diferencial. Nos reunimos los martes y jueves de 4pm a 6pm en la biblioteca. Todos los niveles son bienvenidos.",
+        "id_curso": 18,
+        "id_creador": 1,
+        "tipo": "publico",
+        "max_participantes": 30,
+        "codigo_acceso": null,
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-15 10:30:00"
+    },
+    {
+        "id_grupo": 2,
+        "nombre_grupo": "Programación Orientada a Objetos - Prácticas",
+        "descripcion": "Grupo privado para practicar POO con Java. Compartimos código, resolvemos dudas y hacemos proyectos juntos. Sesiones virtuales los lunes 7pm.",
+        "id_curso": 14,
+        "id_creador": 2,
+        "tipo": "privado",
+        "max_participantes": 15,
+        "codigo_acceso": "JAVA2025",
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-20 14:00:00"
+    },
+    {
+        "id_grupo": 3,
+        "nombre_grupo": "Base de Datos Avanzado",
+        "descripcion": "Profundizamos en SQL, normalización, triggers y procedimientos almacenados. Ideal para quienes quieren dominar BD2. Reuniones presenciales los viernes.",
+        "id_curso": 35,
+        "id_creador": 3,
+        "tipo": "publico",
+        "max_participantes": 25,
+        "codigo_acceso": null,
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-22 09:15:00"
+    },
+    {
+        "id_grupo": 4,
+        "nombre_grupo": "Inteligencia Artificial - Estudio General",
+        "descripcion": "Estudiamos juntos Machine Learning, redes neuronales y proyectos de IA. Compartimos recursos, papers y hacemos challenges. Grupo abierto a todos.",
+        "id_curso": null,
+        "id_creador": 1,
+        "tipo": "publico",
+        "max_participantes": 50,
+        "codigo_acceso": null,
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-18 16:45:00"
+    },
+    {
+        "id_grupo": 5,
+        "nombre_grupo": "Redes de Computadoras - Certificación",
+        "descripcion": "Grupo enfocado en preparación para certificaciones CCNA. Estudiamos protocolos, routing, switching. Solo miembros serios. Código por inbox.",
+        "id_curso": 46,
+        "id_creador": 4,
+        "tipo": "privado",
+        "max_participantes": 20,
+        "codigo_acceso": "CCNA2025",
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-25 11:00:00"
+    },
+    {
+        "id_grupo": 6,
+        "nombre_grupo": "Desarrollo Web Full Stack",
+        "descripcion": "Aprende HTML, CSS, JavaScript, PHP y Laravel desde cero. Hacemos proyectos reales y compartimos código. Sesiones los miércoles y sábados.",
+        "id_curso": 29,
+        "id_creador": 2,
+        "tipo": "publico",
+        "max_participantes": 40,
+        "codigo_acceso": null,
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-12 08:30:00"
+    },
+    {
+        "id_grupo": 7,
+        "nombre_grupo": "Algoritmos y Estructura de Datos",
+        "descripcion": "Resolvemos problemas de LeetCode, HackerRank y preparamos entrevistas técnicas. Nivel intermedio-avanzado. Reuniones virtuales diarias 8pm.",
+        "id_curso": 22,
+        "id_creador": 5,
+        "tipo": "publico",
+        "max_participantes": 35,
+        "codigo_acceso": null,
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-28 15:20:00"
+    },
+    {
+        "id_grupo": 8,
+        "nombre_grupo": "Estadística y Probabilidades - Examen Final",
+        "descripcion": "Grupo intensivo para preparar el examen final. Resolvemos ejercicios del solucionario y hacemos simulacros. Solo para ciclo 3.",
+        "id_curso": 15,
+        "id_creador": 3,
+        "tipo": "privado",
+        "max_participantes": 12,
+        "codigo_acceso": "STATS03",
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-30 13:45:00"
+    },
+    {
+        "id_grupo": 9,
+        "nombre_grupo": "Desarrollo de Apps Móviles con Flutter",
+        "descripcion": "Creamos apps Android e iOS con Flutter. Compartimos proyectos, UI designs y buenas prácticas. Todos los niveles bienvenidos. Grupo muy activo.",
+        "id_curso": 54,
+        "id_creador": 4,
+        "tipo": "publico",
+        "max_participantes": 30,
+        "codigo_acceso": null,
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-14 10:00:00"
+    },
+    {
+        "id_grupo": 10,
+        "nombre_grupo": "Física Electromagnética - Apoyo Mutuo",
+        "descripcion": "Nos ayudamos con ejercicios difíciles de Física 2. Compartimos apuntes, videos y resolvemos tareas juntos. Ambiente colaborativo y amigable.",
+        "id_curso": 27,
+        "id_creador": 1,
+        "tipo": "publico",
+        "max_participantes": 25,
+        "codigo_acceso": null,
+        "esta_activo": true,
+        "fecha_creacion": "2025-10-21 12:30:00"
+    }
+]

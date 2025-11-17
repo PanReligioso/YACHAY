@@ -1,0 +1,28 @@
+[
+  {
+    "id_apunte": 1,
+    "titulo": "Apuntes Completos de Cálculo Diferencial",
+    "descripcion": "Apuntes detallados del curso completo incluyendo límites, derivadas, aplicaciones de la derivada y optimización. Incluye ejemplos resueltos paso a paso y ejercicios propuestos con soluciones.",
+    "id_curso": 8,
+    "tipo_material": "apuntes",
+    "url_drive": "https://drive.google.com/file/d/ejemplo1",
+    "id_usuario_subida": 1,
+    "estado_validacion": "aprobado",
+    "vistas": 245,
+    "descargas": 89,
+    "fecha_subida": "2025-09-15 10:30:00"
+  },
+  {
+    "id_apunte": 2,
+    "titulo": "Guía de Ejercicios POO en Java",
+    "descripcion": "Colección de 50 ejercicios resueltos de Programación Orientada a Objetos usando Java. Cubre herencia, polimorfismo, encapsulamiento y abstracción con ejemplos prácticos del mundo real.",
+    "id_curso": 7,
+    "tipo_material": "ejercicios",
+    "url_drive": "https://drive.google.com/file/d/ejemplo2",
+    "id_usuario_subida": 1,
+    "estado_validacion": "aprobado",
+    "vistas": 189,
+    "descargas": 67,
+    "fecha_subida": "2025-10-01 14:20:00"
+  }
+]

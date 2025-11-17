@@ -1,0 +1,32 @@
+[
+    {
+        "id_usuario": 1,
+        "nombre_completo": "Gary Jhoel",
+        "email": "uwu@continental.edu.pe",
+        "ciclo": "4"
+    },
+    {
+        "id_usuario": 2,
+        "nombre_completo": "María González",
+        "email": "maria@continental.edu.pe",
+        "ciclo": "5"
+    },
+    {
+        "id_usuario": 3,
+        "nombre_completo": "Carlos Mendoza",
+        "email": "carlos@continental.edu.pe",
+        "ciclo": "6"
+    },
+    {
+        "id_usuario": 4,
+        "nombre_completo": "Ana Quispe",
+        "email": "ana@continental.edu.pe",
+        "ciclo": "7"
+    },
+    {
+        "id_usuario": 5,
+        "nombre_completo": "Pedro Huamán",
+        "email": "pedro@continental.edu.pe",
+        "ciclo": "8"
+    }
+]
