@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('usuarios', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre', 100);
+            $table->string('apellido', 100);
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('codigo_universitario', 20)->nullable()->unique();
+            $table->string('google_id')->nullable()->unique();
+            $table->string('avatar')->nullable();
+            $table->unsignedBigInteger('rol_id')->default(2);
+            $table->timestamps();
+
+            // LÍNEA CORREGIDA: Ahora referencia a 'id_rol' en la tabla 'roles'
+            $table->foreign('rol_id')->references('id_rol')->on('roles')->onDelete('cascade');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('usuarios');
+    }
+};
